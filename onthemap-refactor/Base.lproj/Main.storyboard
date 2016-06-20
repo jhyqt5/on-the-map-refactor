@@ -128,7 +128,14 @@
                             <constraint firstItem="UlH-Ga-qsF" firstAttribute="top" secondItem="Ebr-mh-XgW" secondAttribute="bottom" id="rUP-AF-yG1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xgN-1N-K8P"/>
+                    <navigationItem key="navigationItem" id="xgN-1N-K8P">
+                        <barButtonItem key="leftBarButtonItem" image="pin" id="Tof-xT-8TN">
+                            <connections>
+                                <segue destination="lFj-y8-NKu" kind="presentation" id="4Ge-aX-v4s"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Kl5-QM-tgf"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="UlH-Ga-qsF" id="jVj-86-3m3"/>
@@ -155,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZW-bf-1EV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="53"/>
+            <point key="canvasLocation" x="936" y="53"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="vIv-93-Q0X">
@@ -181,7 +188,14 @@
                             <constraint firstItem="nzN-nc-PFC" firstAttribute="top" secondItem="Thz-Ih-W8V" secondAttribute="bottom" id="y3b-fi-uvp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZEy-1e-xlH"/>
+                    <navigationItem key="navigationItem" id="ZEy-1e-xlH">
+                        <barButtonItem key="leftBarButtonItem" image="pin" id="ObH-mX-EYP">
+                            <connections>
+                                <segue destination="lFj-y8-NKu" kind="presentation" id="dMg-ii-kHO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="puX-tz-fw5"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="Thz-Ih-W8V" id="tvi-b4-fdR"/>
@@ -252,6 +266,10 @@
     <resources>
         <image name="Table" width="32" height="32"/>
         <image name="map" width="32" height="32"/>
+        <image name="pin" width="32" height="32"/>
         <image name="udacity" width="2400" height="1260"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Ge-aX-v4s"/>
+    </inferredMetricsTieBreakers>
 </document>
