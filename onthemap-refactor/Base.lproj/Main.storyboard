@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -16,7 +17,61 @@
                     <view key="view" contentMode="scaleToFill" id="mJp-Hw-a8N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="udacity" translatesAutoresizingMaskIntoConstraints="NO" id="oA7-8Q-uxs">
+                                <rect key="frame" x="40" y="28" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="BFR-zM-mHy"/>
+                                    <constraint firstAttribute="width" constant="200" id="XyF-xg-pvi"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W4K-cf-Ma3">
+                                <rect key="frame" x="40" y="264" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qBi-oX-bVG">
+                                <rect key="frame" x="40" y="302" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3f-ZI-A4c">
+                                <rect key="frame" x="40" y="349" width="240" height="30"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.64313725489999995" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Heq-WP-0K5">
+                                <rect key="frame" x="71" y="395" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Don't have an account? Sign up"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login to Udacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJf-K3-7Bz">
+                                <rect key="frame" x="98" y="216" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.082352941176470587" green="0.64313725490196083" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P3f-ZI-A4c" firstAttribute="leading" secondItem="mJp-Hw-a8N" secondAttribute="leadingMargin" constant="20" id="5Kc-ya-s4a"/>
+                            <constraint firstItem="pJf-K3-7Bz" firstAttribute="centerX" secondItem="mJp-Hw-a8N" secondAttribute="centerX" id="5hj-SB-Vte"/>
+                            <constraint firstItem="Heq-WP-0K5" firstAttribute="centerX" secondItem="mJp-Hw-a8N" secondAttribute="centerX" id="Mvq-kc-Vhc"/>
+                            <constraint firstItem="qBi-oX-bVG" firstAttribute="top" secondItem="W4K-cf-Ma3" secondAttribute="bottom" constant="10" id="SEc-iN-vjC"/>
+                            <constraint firstItem="qBi-oX-bVG" firstAttribute="leading" secondItem="mJp-Hw-a8N" secondAttribute="leadingMargin" constant="20" id="WFB-QO-JRr"/>
+                            <constraint firstItem="pJf-K3-7Bz" firstAttribute="top" secondItem="oA7-8Q-uxs" secondAttribute="bottom" constant="15" id="YAv-j0-Ays"/>
+                            <constraint firstItem="W4K-cf-Ma3" firstAttribute="leading" secondItem="mJp-Hw-a8N" secondAttribute="leadingMargin" constant="20" id="dGF-N3-Zgx"/>
+                            <constraint firstItem="W4K-cf-Ma3" firstAttribute="top" secondItem="pJf-K3-7Bz" secondAttribute="bottom" constant="25" id="gdq-Et-JnB"/>
+                            <constraint firstItem="Heq-WP-0K5" firstAttribute="top" secondItem="P3f-ZI-A4c" secondAttribute="bottom" constant="15" id="ofQ-ob-rGk"/>
+                            <constraint firstItem="oA7-8Q-uxs" firstAttribute="centerX" secondItem="mJp-Hw-a8N" secondAttribute="centerX" id="pcZ-V6-Fh5"/>
+                            <constraint firstItem="oA7-8Q-uxs" firstAttribute="top" secondItem="1Bk-U1-MKc" secondAttribute="bottom" constant="20" id="tE3-XE-LPk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W4K-cf-Ma3" secondAttribute="trailing" constant="20" id="uPW-Wd-wTf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qBi-oX-bVG" secondAttribute="trailing" constant="20" id="vQy-PK-5cR"/>
+                            <constraint firstItem="P3f-ZI-A4c" firstAttribute="top" secondItem="qBi-oX-bVG" secondAttribute="bottom" constant="10" id="w41-QS-7Nd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P3f-ZI-A4c" secondAttribute="trailing" constant="20" id="xXc-Iy-Vce"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
@@ -35,7 +90,29 @@
                     <view key="view" contentMode="scaleToFill" id="zpb-X1-q9E">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UlH-Ga-qsF">
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NZ3-t5-FcK">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NZ3-t5-FcK" id="bvS-WC-rNt">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UlH-Ga-qsF" firstAttribute="leading" secondItem="zpb-X1-q9E" secondAttribute="leadingMargin" constant="-20" id="0Np-1w-J8f"/>
+                            <constraint firstItem="6sN-sZ-d22" firstAttribute="top" secondItem="UlH-Ga-qsF" secondAttribute="bottom" id="IOW-OP-yxk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UlH-Ga-qsF" secondAttribute="trailing" constant="-20" id="qIh-fb-hUO"/>
+                            <constraint firstItem="UlH-Ga-qsF" firstAttribute="top" secondItem="Ebr-mh-XgW" secondAttribute="bottom" id="rUP-AF-yG1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xgN-1N-K8P"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -74,7 +151,18 @@
                     <view key="view" contentMode="scaleToFill" id="AJF-XQ-wWb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8Ub-Bx-hsV">
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Ub-Bx-hsV" firstAttribute="top" secondItem="89K-Zd-Bdf" secondAttribute="bottom" id="BgL-6W-bcJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Ub-Bx-hsV" secondAttribute="trailing" constant="-20" id="Eek-7s-ZkI"/>
+                            <constraint firstItem="8Ub-Bx-hsV" firstAttribute="leading" secondItem="AJF-XQ-wWb" secondAttribute="leadingMargin" constant="-20" id="bgG-zM-tJf"/>
+                            <constraint firstItem="nzN-nc-PFC" firstAttribute="top" secondItem="8Ub-Bx-hsV" secondAttribute="bottom" id="hOX-wr-vdv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZEy-1e-xlH"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -144,5 +232,6 @@
     <resources>
         <image name="Table" width="32" height="32"/>
         <image name="map" width="32" height="32"/>
+        <image name="udacity" width="2400" height="1260"/>
     </resources>
 </document>
