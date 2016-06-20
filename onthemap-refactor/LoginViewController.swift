@@ -54,6 +54,12 @@ class LoginViewController: HelperViewController, UITextFieldDelegate {
         }
     } //end loginuser
     
+    @IBAction func signupUser(sender: AnyObject) {
+    
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.udacity.com/account/auth#!/signup")!)
+    
+    }//end sign up
+    
     private func setFormState(loggingIn: Bool, errorMessage: String? = nil) {
         emailTextField.enabled = !loggingIn
         passwordTextfield.enabled = !loggingIn

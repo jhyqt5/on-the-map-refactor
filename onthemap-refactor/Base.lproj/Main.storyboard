@@ -55,6 +55,9 @@
                                 <rect key="frame" x="70" y="395" width="179" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Don't have an account? Sign up"/>
+                                <connections>
+                                    <action selector="signupUser:" destination="3FY-BH-XNK" eventType="touchUpInside" id="4tN-LP-OTr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
