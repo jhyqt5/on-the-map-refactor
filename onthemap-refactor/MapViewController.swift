@@ -6,31 +6,13 @@
 //  Copyright © 2016 Daniel Huang. All rights reserved.
 //
 
+// Citation: http://www.raywenderlich.com/90971/introduction-mapkit-swift-tutorial
+
 import UIKit
 import MapKit
 
 class MapViewController: HelperViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    @IBOutlet weak var mapView: MKMapView!
 
 }

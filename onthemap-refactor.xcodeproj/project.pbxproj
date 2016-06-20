@@ -21,6 +21,8 @@
 		371C6BE91D186D2F00254AFD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BE81D186D2F00254AFD /* TableViewController.swift */; };
 		371C6BEB1D18744D00254AFD /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BEA1D18744D00254AFD /* HelperViewController.swift */; };
 		371C6BED1D18759400254AFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BEC1D18759400254AFD /* User.swift */; };
+		371C6BEF1D187BF300254AFD /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BEE1D187BF300254AFD /* Student.swift */; };
+		371C6BF11D187D2F00254AFD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BF01D187D2F00254AFD /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		371C6BE81D186D2F00254AFD /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		371C6BEA1D18744D00254AFD /* HelperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
 		371C6BEC1D18759400254AFD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		371C6BEE1D187BF300254AFD /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		371C6BF01D187D2F00254AFD /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				371C6BE61D186D2400254AFD /* PostViewController.swift */,
 				371C6BE81D186D2F00254AFD /* TableViewController.swift */,
 				371C6BEC1D18759400254AFD /* User.swift */,
+				371C6BEE1D187BF300254AFD /* Student.swift */,
+				371C6BF01D187D2F00254AFD /* Location.swift */,
 			);
 			path = "onthemap-refactor";
 			sourceTree = "<group>";
@@ -278,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				371C6BE71D186D2400254AFD /* PostViewController.swift in Sources */,
+				371C6BF11D187D2F00254AFD /* Location.swift in Sources */,
 				371C6BE91D186D2F00254AFD /* TableViewController.swift in Sources */,
 				371C6BE31D186CDA00254AFD /* LoginViewController.swift in Sources */,
+				371C6BEF1D187BF300254AFD /* Student.swift in Sources */,
 				371C6BBA1D18687100254AFD /* onthemap_refactor.xcdatamodeld in Sources */,
 				371C6BEB1D18744D00254AFD /* HelperViewController.swift in Sources */,
 				371C6BED1D18759400254AFD /* User.swift in Sources */,

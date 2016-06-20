@@ -165,10 +165,24 @@
                     <view key="view" contentMode="scaleToFill" id="AJF-XQ-wWb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Thz-Ih-W8V">
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Thz-Ih-W8V" firstAttribute="top" secondItem="89K-Zd-Bdf" secondAttribute="bottom" id="DqE-Ar-tca"/>
+                            <constraint firstItem="Thz-Ih-W8V" firstAttribute="leading" secondItem="AJF-XQ-wWb" secondAttribute="leadingMargin" constant="-20" id="Ocy-P4-2x1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Thz-Ih-W8V" secondAttribute="trailing" constant="-20" id="aVS-IB-ixO"/>
+                            <constraint firstItem="nzN-nc-PFC" firstAttribute="top" secondItem="Thz-Ih-W8V" secondAttribute="bottom" id="y3b-fi-uvp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZEy-1e-xlH"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="Thz-Ih-W8V" id="tvi-b4-fdR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsy-rA-0rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
