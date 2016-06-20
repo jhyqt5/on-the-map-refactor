@@ -30,6 +30,10 @@ class MapViewController: HelperViewController, MKMapViewDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MapViewController.reloadMap), name: refreshNotificationName, object: nil)
     }
     
+    @IBAction func refreshMap(sender: AnyObject) {
+        reloadMap()
+    }
+    
     func reloadMap() {
         self.mapView.removeAnnotations(Location.locations)
         self.loadAnnotations()
@@ -47,7 +51,7 @@ class MapViewController: HelperViewController, MKMapViewDelegate {
     }
     
     func centerOnMap(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 10000, 10000)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 200000, 200000)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
@@ -73,7 +77,7 @@ class MapViewController: HelperViewController, MKMapViewDelegate {
         selectedView = view
     }
     
-    func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView!) {
+    func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
         selectedView = nil
         view.removeGestureRecognizer(tapGesture)
     }
