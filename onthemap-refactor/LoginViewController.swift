@@ -43,8 +43,15 @@ class LoginViewController: HelperViewController, UITextFieldDelegate {
     @IBAction func loginUser(sender: AnyObject) {
         setFormState(true)
         
-    
-    
+        if let username = emailTextField.text, password = passwordTextfield.text {
+            User.loginUser(username, password: password) { (success, errorMessage) in
+                self.setFormState(false, errorMessage: errorMessage)
+                if success {
+                    self.setFormState(false)
+                    self.performSegueWithIdentifier("showTabViews", sender: self)
+                }
+            }
+        }
     } //end loginuser
     
     private func setFormState(loggingIn: Bool, errorMessage: String? = nil) {

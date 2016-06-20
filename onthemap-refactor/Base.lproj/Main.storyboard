@@ -83,6 +83,7 @@
                         <outlet property="loginLabel" destination="pJf-K3-7Bz" id="hun-yl-BKW"/>
                         <outlet property="passwordTextfield" destination="qBi-oX-bVG" id="Dmh-r5-SWA"/>
                         <outlet property="signupButton" destination="Heq-WP-0K5" id="vYP-Xt-WR0"/>
+                        <segue destination="ApO-HC-sPM" kind="show" identifier="showTabViews" id="xkm-at-mPX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yf-tJ-M70" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,18 +162,7 @@
                     <view key="view" contentMode="scaleToFill" id="AJF-XQ-wWb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8Ub-Bx-hsV">
-                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="8Ub-Bx-hsV" firstAttribute="top" secondItem="89K-Zd-Bdf" secondAttribute="bottom" id="BgL-6W-bcJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8Ub-Bx-hsV" secondAttribute="trailing" constant="-20" id="Eek-7s-ZkI"/>
-                            <constraint firstItem="8Ub-Bx-hsV" firstAttribute="leading" secondItem="AJF-XQ-wWb" secondAttribute="leadingMargin" constant="-20" id="bgG-zM-tJf"/>
-                            <constraint firstItem="nzN-nc-PFC" firstAttribute="top" secondItem="8Ub-Bx-hsV" secondAttribute="bottom" id="hOX-wr-vdv"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZEy-1e-xlH"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
