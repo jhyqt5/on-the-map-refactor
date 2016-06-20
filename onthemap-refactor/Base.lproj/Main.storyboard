@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="jkI-x5-9eB">
             <objects>
-                <viewController id="3FY-BH-XNK" sceneMemberID="viewController">
+                <viewController id="3FY-BH-XNK" customClass="LoginViewController" customModule="onthemap_refactor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Bk-U1-MKc"/>
                         <viewControllerLayoutGuide type="bottom" id="r4q-gt-QYQ"/>
@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-857" y="53"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="mX7-Rx-Kdm">
             <objects>
-                <viewController id="KPV-GW-Vg7" sceneMemberID="viewController">
+                <viewController id="KPV-GW-Vg7" customClass="TableViewController" customModule="onthemap_refactor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ebr-mh-XgW"/>
                         <viewControllerLayoutGuide type="bottom" id="6sN-sZ-d22"/>
@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="481" y="403"/>
         </scene>
-        <!--View Controller-->
+        <!--Post View Controller-->
         <scene sceneID="F1I-5y-iTh">
             <objects>
-                <viewController id="lFj-y8-NKu" sceneMemberID="viewController">
+                <viewController id="lFj-y8-NKu" customClass="PostViewController" customModule="onthemap_refactor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6E3-5U-caG"/>
                         <viewControllerLayoutGuide type="bottom" id="Gva-XP-TgW"/>
@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="902" y="53"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="vIv-93-Q0X">
             <objects>
-                <viewController id="NCZ-Jo-LrI" sceneMemberID="viewController">
+                <viewController id="NCZ-Jo-LrI" customClass="MapViewController" customModule="onthemap_refactor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="89K-Zd-Bdf"/>
                         <viewControllerLayoutGuide type="bottom" id="nzN-nc-PFC"/>
@@ -102,11 +102,11 @@
             </objects>
             <point key="canvasLocation" x="-401" y="53"/>
         </scene>
-        <!--Item 1-->
+        <!--Map-->
         <scene sceneID="bqr-b1-1iE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QYG-Oe-zXY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Wfl-vG-Yoj"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="Wfl-vG-Yoj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w8H-EB-O7d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -121,11 +121,11 @@
             </objects>
             <point key="canvasLocation" x="35" y="-322"/>
         </scene>
-        <!--Item 2-->
+        <!--List-->
         <scene sceneID="vAv-w4-U6R">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dys-Rz-2tE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="JJr-s7-d7b"/>
+                    <tabBarItem key="tabBarItem" title="List" image="Table" id="JJr-s7-d7b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Nl-dT-21B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -141,4 +141,8 @@
             <point key="canvasLocation" x="35" y="403"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Table" width="32" height="32"/>
+        <image name="map" width="32" height="32"/>
+    </resources>
 </document>
