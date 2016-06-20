@@ -21,5 +21,20 @@ class HelperViewController: UIViewController {
         alertController.addAction(OkAction)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    
+    //Table and Map methods
+    let refreshNotificationName = "Location Data Refresh Notification"
+    
+    internal func loadLocationData(forceRefresh: Bool = false, didComplete: (() -> Void)?) {
+        Location.getStudentLocations(forceRefresh) { success in
+            if !success {
+                self.showErrorAlert("Error Loading Locations", defaultMessage: "Loading failed.", errors: Location.errors)
+            } else if !Location.locations.isEmpty && didComplete != nil {
+                didComplete!()
+            }
+        }
+    }
+    
 
 }

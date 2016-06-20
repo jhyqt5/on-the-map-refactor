@@ -26,7 +26,7 @@ class Student: NSObject, MKAnnotation {
         )
         firstName = data["firstName"] as! String
         lastName = data["lastName"] as! String
-        url = data["url"] as! String
+        url = data["mediaURL"] as! String
         
         title = "\(firstName) \(lastName)"
         subtitle = url
@@ -37,7 +37,7 @@ class Student: NSObject, MKAnnotation {
         let longitude = data["longitude"] as? Double,
         let firstName = data["firstName"] as? String,
         let lastName = data["lastName"] as? String,
-        let url = data["url"] as? String
+        let url = data["mediaURL"] as? String
         {
         return true
         }

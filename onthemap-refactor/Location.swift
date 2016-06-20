@@ -22,7 +22,7 @@ class Location {
         if refresh || locations.isEmpty {
             locations = []
             
-            let request = NSMutableURLRequest(URL: NSURL(string: "https://api.parse.com/1/classes/StudentLocation?limit=100&order=-createdAt")!)
+            let request = NSMutableURLRequest(URL: NSURL(string: "https://api.parse.com/1/classes/StudentLocation")!)
             request.addValue(Location.appId, forHTTPHeaderField: "X-Parse-Application-Id")
             request.addValue(Location.apiKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
             let session = NSURLSession.sharedSession()

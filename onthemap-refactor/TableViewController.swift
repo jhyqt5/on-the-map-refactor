@@ -8,28 +8,48 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
+class TableViewController: HelperViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        loadLocationData() {
+            self.tableView.reloadData()
+        }
+        tableView.delegate = self
+        tableView.dataSource = self
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableViewController.reloadData), name: refreshNotificationName, object: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func reloadData() {
+        tableView.reloadData()
     }
-    */
+    
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("listCell")! as UITableViewCell
+        if  Location.locations.count > indexPath.row {
+            let studentInfo = Location.locations[indexPath.row]
+            cell.textLabel!.text = studentInfo.title
+            cell.imageView!.image = UIImage(named: "pin")
+        }
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Location.locations.count
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if  Location.locations.count > indexPath.row {
+            let studentInfo = Location.locations[indexPath.row]
+            if let url = NSURL(string: studentInfo.url) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }
+    }
 
 }
