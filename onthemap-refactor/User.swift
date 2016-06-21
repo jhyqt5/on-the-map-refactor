@@ -90,4 +90,29 @@ class User {
     }    
     
     
+    //Add logout
+    class func logOut(didComplete: (success: Bool) -> Void) {
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://www.udacity.com/api/session")!)
+        request.HTTPMethod = "DELETE"
+        var xsrfCookie: NSHTTPCookie? = nil
+        let sharedCookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+        for cookie in (sharedCookieStorage.cookies! as [NSHTTPCookie]) {
+            if cookie.name == "XSRF-TOKEN" { xsrfCookie = cookie }
+        }
+        if let xsrfCookie = xsrfCookie {
+            request.addValue(xsrfCookie.value, forHTTPHeaderField: "X-XSRF-Token")
+        }
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request) { data, response, error in
+            if error != nil { // Handle error…
+                self.errors.append(error!)
+                didComplete(success: false)
+                return
+            }
+            let newData = data!.subdataWithRange(NSMakeRange(5, data!.length - 5)) /* subset response data! */
+            didComplete(success: true)
+        }
+        task.resume()
+    }
+    
 } //end user Class

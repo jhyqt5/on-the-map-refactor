@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		371C6BB21D18687100254AFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BB11D18687100254AFD /* AppDelegate.swift */; };
-		371C6BB41D18687100254AFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BB31D18687100254AFD /* ViewController.swift */; };
 		371C6BB71D18687100254AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371C6BB51D18687100254AFD /* Main.storyboard */; };
 		371C6BBA1D18687100254AFD /* onthemap_refactor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BB81D18687100254AFD /* onthemap_refactor.xcdatamodeld */; };
 		371C6BBC1D18687100254AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371C6BBB1D18687100254AFD /* Assets.xcassets */; };
@@ -23,6 +22,7 @@
 		371C6BED1D18759400254AFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BEC1D18759400254AFD /* User.swift */; };
 		371C6BEF1D187BF300254AFD /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BEE1D187BF300254AFD /* Student.swift */; };
 		371C6BF11D187D2F00254AFD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C6BF01D187D2F00254AFD /* Location.swift */; };
+		37DDD41C1D19F2BF0064EC37 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDD41B1D19F2BF0064EC37 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 /* Begin PBXFileReference section */
 		371C6BAE1D18687100254AFD /* onthemap-refactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "onthemap-refactor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		371C6BB11D18687100254AFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		371C6BB31D18687100254AFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		371C6BB61D18687100254AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		371C6BB91D18687100254AFD /* onthemap_refactor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = onthemap_refactor.xcdatamodel; sourceTree = "<group>"; };
 		371C6BBB1D18687100254AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		371C6BEC1D18759400254AFD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		371C6BEE1D187BF300254AFD /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		371C6BF01D187D2F00254AFD /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		37DDD41B1D19F2BF0064EC37 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				371C6BB11D18687100254AFD /* AppDelegate.swift */,
-				371C6BB31D18687100254AFD /* ViewController.swift */,
 				371C6BB51D18687100254AFD /* Main.storyboard */,
 				371C6BBB1D18687100254AFD /* Assets.xcassets */,
 				371C6BBD1D18687100254AFD /* LaunchScreen.storyboard */,
@@ -130,6 +129,7 @@
 				371C6BEC1D18759400254AFD /* User.swift */,
 				371C6BEE1D187BF300254AFD /* Student.swift */,
 				371C6BF01D187D2F00254AFD /* Location.swift */,
+				37DDD41B1D19F2BF0064EC37 /* test.swift */,
 			);
 			path = "onthemap-refactor";
 			sourceTree = "<group>";
@@ -291,9 +291,9 @@
 				371C6BBA1D18687100254AFD /* onthemap_refactor.xcdatamodeld in Sources */,
 				371C6BEB1D18744D00254AFD /* HelperViewController.swift in Sources */,
 				371C6BED1D18759400254AFD /* User.swift in Sources */,
-				371C6BB41D18687100254AFD /* ViewController.swift in Sources */,
 				371C6BE51D186D0B00254AFD /* MapViewController.swift in Sources */,
 				371C6BB21D18687100254AFD /* AppDelegate.swift in Sources */,
+				37DDD41C1D19F2BF0064EC37 /* test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +518,7 @@
 				371C6BDB1D18687100254AFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		371C6BDC1D18687100254AFD /* Build configuration list for PBXNativeTarget "onthemap-refactorTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +527,7 @@
 				371C6BDE1D18687100254AFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		371C6BDF1D18687100254AFD /* Build configuration list for PBXNativeTarget "onthemap-refactorUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +536,7 @@
 				371C6BE11D18687100254AFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

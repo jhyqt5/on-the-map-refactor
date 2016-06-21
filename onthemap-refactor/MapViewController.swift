@@ -15,6 +15,7 @@ class MapViewController: HelperViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    var theError: NSError?
     var selectedView: MKAnnotationView?
     var tapGesture: UITapGestureRecognizer!
     
@@ -30,11 +31,7 @@ class MapViewController: HelperViewController, MKMapViewDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MapViewController.reloadMap), name: refreshNotificationName, object: nil)
     }
     
-    @IBAction func refreshMap(sender: AnyObject) {
-        reloadMap()
-    }
-    
-    func reloadMap() {
+    func reloadMap(){
         self.mapView.removeAnnotations(Location.locations)
         self.loadAnnotations()
     }
@@ -90,5 +87,4 @@ class MapViewController: HelperViewController, MKMapViewDelegate {
             UIApplication.sharedApplication().openURL(url)
         }
     }
-
 }

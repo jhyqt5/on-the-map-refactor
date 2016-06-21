@@ -37,7 +37,7 @@ class PostViewController: HelperViewController, MKMapViewDelegate, UITextFieldDe
     override func viewDidLoad() {
         super.viewDidLoad()
         //tap
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("didTapTextContainer:"))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(PostViewController.didTapTextContainer(_:)))
 
         
         //textfields
@@ -104,11 +104,13 @@ class PostViewController: HelperViewController, MKMapViewDelegate, UITextFieldDe
     }
     
     func startGeocoding() {
+        geoCodeIndicator.hidden = false
         geoCodeIndicator.startAnimating()
         entryView.alpha = 0.5
     }
     
     func stopGeoLoading() {
+        geoCodeIndicator.hidden = true
         geoCodeIndicator.stopAnimating()
         entryView.alpha = 1
     }
@@ -145,6 +147,10 @@ class PostViewController: HelperViewController, MKMapViewDelegate, UITextFieldDe
             let text = urlField.text
             
             Location.postNewLocation(coord.latitude, longitude: coord.longitude, mediaURL: text!, mapString: mapString) { success in
+                
+                if !success {
+                    self.showErrorAlert("Post Failed", defaultMessage: "There was an error posting, please try again.", errors: [])
+                }
                 
                 self.dismissViewControllerAnimated(true, completion: nil)
             }

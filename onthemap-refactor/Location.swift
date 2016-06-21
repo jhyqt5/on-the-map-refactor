@@ -55,6 +55,9 @@ class Location {
                         success = false
                         break
                     }
+                    
+                    
+                    //if valid, then create instance of student struct with studentInfo and append to locations array
                     locations.append(Student(data: studentInfo))
                 }
             }
@@ -83,6 +86,7 @@ class Location {
             if error != nil {
                 self.errors.append(error!)
                 didComplete(success: false)
+                
                 return
             }
             didComplete(success: true)

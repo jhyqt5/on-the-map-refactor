@@ -22,10 +22,6 @@ class TableViewController: HelperViewController, UITableViewDelegate, UITableVie
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableViewController.reloadData), name: refreshNotificationName, object: nil)
     }
     
-    @IBAction func refreshTable(sender: AnyObject) {
-        tableView.reloadData()
-    }
-    
     func reloadData() {
         tableView.reloadData()
     }
@@ -53,5 +49,4 @@ class TableViewController: HelperViewController, UITableViewDelegate, UITableVie
             }
         }
     }
-
 }

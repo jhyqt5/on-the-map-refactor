@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -129,16 +130,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="List" id="xgN-1N-K8P">
-                        <barButtonItem key="leftBarButtonItem" image="pin" id="Tof-xT-8TN">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Dja-Mh-2LE">
                             <connections>
-                                <segue destination="lFj-y8-NKu" kind="presentation" id="4Ge-aX-v4s"/>
+                                <action selector="didPressLogout:" destination="KPV-GW-Vg7" id="F3J-jK-E8Y"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Kl5-QM-tgf">
-                            <connections>
-                                <action selector="refreshTable:" destination="KPV-GW-Vg7" id="PU6-4h-aFl"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="refresh" id="Kl5-QM-tgf">
+                                <connections>
+                                    <action selector="didPressRefresh:" destination="KPV-GW-Vg7" id="rMa-bk-U0J"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="pin" id="Tof-xT-8TN">
+                                <connections>
+                                    <segue destination="lFj-y8-NKu" kind="presentation" id="4Ge-aX-v4s"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -191,16 +199,11 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="1NK-hw-NaJ">
-                                                <rect key="frame" x="150" y="82" width="20" height="20"/>
-                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.08235294118" green="0.64313725489999995" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="8iF-ct-x0T"/>
-                                            <constraint firstItem="1NK-hw-NaJ" firstAttribute="centerY" secondItem="15y-ft-hdY" secondAttribute="centerY" id="9aa-tT-pO3"/>
                                             <constraint firstItem="ck2-yu-tWE" firstAttribute="leading" secondItem="15y-ft-hdY" secondAttribute="leading" constant="8" id="AhT-1c-z0Q"/>
-                                            <constraint firstItem="1NK-hw-NaJ" firstAttribute="centerX" secondItem="15y-ft-hdY" secondAttribute="centerX" id="EHa-dI-Ulm"/>
                                             <constraint firstItem="ck2-yu-tWE" firstAttribute="top" secondItem="15y-ft-hdY" secondAttribute="top" constant="8" id="UdB-ch-q32"/>
                                             <constraint firstAttribute="trailing" secondItem="ck2-yu-tWE" secondAttribute="trailing" constant="8" id="Yc0-OR-Oia"/>
                                         </constraints>
@@ -279,9 +282,13 @@
                                     <constraint firstAttribute="trailing" secondItem="BkG-yA-IVk" secondAttribute="trailing" id="z8r-h5-mHE"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="1NK-hw-NaJ">
+                                <rect key="frame" x="150" y="230" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1NK-hw-NaJ" firstAttribute="centerX" secondItem="NnQ-46-qRR" secondAttribute="centerX" id="3Py-qY-bn2"/>
                             <constraint firstItem="hF2-tO-kBj" firstAttribute="top" secondItem="2qY-Fq-YhS" secondAttribute="bottom" id="O2w-78-SKc"/>
                             <constraint firstItem="2qY-Fq-YhS" firstAttribute="leading" secondItem="NnQ-46-qRR" secondAttribute="leadingMargin" constant="-20" id="Rb2-3B-klX"/>
                             <constraint firstItem="2qY-Fq-YhS" firstAttribute="top" secondItem="NnQ-46-qRR" secondAttribute="topMargin" id="Ylt-ls-XFc"/>
@@ -289,6 +296,7 @@
                             <constraint firstItem="hF2-tO-kBj" firstAttribute="leading" secondItem="NnQ-46-qRR" secondAttribute="leadingMargin" constant="-20" id="aZm-J7-NcP"/>
                             <constraint firstItem="bbz-NX-cQ6" firstAttribute="bottom" secondItem="NnQ-46-qRR" secondAttribute="bottomMargin" id="bAf-VA-zWk"/>
                             <constraint firstItem="hF2-tO-kBj" firstAttribute="bottom" secondItem="NnQ-46-qRR" secondAttribute="bottomMargin" id="dGX-im-bhK"/>
+                            <constraint firstItem="1NK-hw-NaJ" firstAttribute="centerY" secondItem="NnQ-46-qRR" secondAttribute="centerY" id="jPn-3q-ySq"/>
                             <constraint firstItem="bbz-NX-cQ6" firstAttribute="leading" secondItem="NnQ-46-qRR" secondAttribute="leadingMargin" constant="-20" id="o7C-XW-WDc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bbz-NX-cQ6" secondAttribute="trailing" constant="-20" id="pO5-Ol-eBu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2qY-Fq-YhS" secondAttribute="trailing" constant="-20" id="sZm-oE-Iey"/>
@@ -339,16 +347,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="ZEy-1e-xlH">
-                        <barButtonItem key="leftBarButtonItem" image="pin" id="ObH-mX-EYP">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="YBf-59-TBc">
                             <connections>
-                                <segue destination="lFj-y8-NKu" kind="presentation" id="dMg-ii-kHO"/>
+                                <action selector="didPressLogout:" destination="NCZ-Jo-LrI" id="rVL-s9-vVs"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="puX-tz-fw5">
-                            <connections>
-                                <action selector="refreshMap:" destination="NCZ-Jo-LrI" id="RuH-ch-5HS"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="refresh" id="puX-tz-fw5">
+                                <connections>
+                                    <action selector="didPressRefresh:" destination="NCZ-Jo-LrI" id="0uA-BF-xaW"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="pin" id="ObH-mX-EYP">
+                                <connections>
+                                    <segue destination="lFj-y8-NKu" kind="presentation" id="dMg-ii-kHO"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>

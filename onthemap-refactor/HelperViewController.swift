@@ -11,6 +11,7 @@ import MapKit
 
 class HelperViewController: UIViewController {
 
+    
     internal func showErrorAlert(title: String, defaultMessage: String, errors: [NSError]) {
         var message = defaultMessage
         if !errors.isEmpty {
@@ -22,6 +23,26 @@ class HelperViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    //shared refresh
+    @IBAction func didPressRefresh(sender: UIBarButtonItem) {
+        self.loadLocationData(true) {
+            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: self.refreshNotificationName, object: self))
+        }
+    }
+    
+    //shared logout
+    @IBAction func didPressLogout(sender: UIBarButtonItem) {
+        sender.enabled = false
+        User.logOut() { success in
+            sender.enabled = true
+            if !success {
+                self.showErrorAlert("Logout Failed", defaultMessage: "Could not log out", errors: User.errors)
+            } else {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
+        
+    }
     
     //Table and Map methods
     let refreshNotificationName = "Location Data Refresh Notification"
